@@ -164,9 +164,14 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * laravel.loc specific providers
+         * kogotok.loc specific providers
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
+         * SleepingOwl Service Provider
+         */
+        SleepingOwl\Admin\Providers\SleepingOwlServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'IndexController@index'
+]);
+
+Route::get('/portfolio', [
+    'as' => 'portfolio',
+    'uses' => 'PortfolioController@index'
+]);
+
+
+Route::get('/contacts', [
+    'as' => 'contacts',
+    'uses' => 'ContactsController@index'
+]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
